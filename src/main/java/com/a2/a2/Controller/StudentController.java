@@ -2,7 +2,6 @@ package com.a2.a2.Controller;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,15 +10,11 @@ import org.springframework.ui.Model;
 import com.a2.a2.Model.Student;
 import com.a2.a2.Model.StudentRepository;
 
-import jakarta.persistence.criteria.CriteriaBuilder.In;
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
@@ -62,12 +57,11 @@ public class StudentController {
         return "redirect:/add.html";
     }
 
-    @PostMapping("/students/edit") //SOMETING WRONG HERE
+    @PostMapping("/students/edit") 
     public String editStudent(@RequestParam Map<String, String> editStudent) {
         int uid = Integer.parseInt(editStudent.get("uid"));
         Student student = studentRepo.findById(uid).get();
 
-        //Student student = studentRepo.findById(uid).get();
         student.setName(editStudent.get("name"));
         student.setWeight(Integer.parseInt(editStudent.get("weight")));
         student.setHeight(Integer.parseInt(editStudent.get("height")));
