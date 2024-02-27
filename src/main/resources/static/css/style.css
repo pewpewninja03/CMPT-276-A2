@@ -1,7 +1,26 @@
 .rectangle {
     border: 2px solid;
-    background-color: lightgray;
+    background-color: gainsboro;
+    text-align: center;
 }
 .student-name-text {
     font-size: x-large;
+}
+
+.card {
+    background-color: #F2C18D;
+    border: 2px solid;
+}
+
+.student-text-header {
+    color: black;
+}
+
+body {
+    background-color: #A5DD9B;
+  }
+
+.btn {
+    background-color: #F2C18D;
+    border: 2px solid;
 }

@@ -24,11 +24,12 @@
             </li>
           </ul>
         </div>
+      </div>
 
     <main class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <h1>STUDENTS</h1>
+                <h1 class="student-text-header">STUDENTS</h1>
                 <div class="rectangle" th:each="student:${students}" 
                     th:style="'width:'+${student.weight} *1.5+'px; height:'+${student.height} *1.5+'px;'">
                     <a class ="student-name-text" th:text="${student.name}" th:style="'color:' + ${student.hairColor}" th:href="@{/students/edit/{id}(id=${student.uid})}"></a>
