@@ -10,21 +10,19 @@ public class Student {
     private int uid;
 
     private String name;
-    private float weight;
-    private float height;
+    private int weight;
+    private int height;
     private String hairColor;
     private float gpa;
-    private String major;
 
     public Student() {}
 
-    public Student(String name, float weight, float height, String hairColor, float gpa, String major) {
+    public Student(String name, int weight, int height, String hairColor, float gpa) {
         this.name = name;
         this.weight = weight;
         this.height = height;
         this.hairColor = hairColor;
         this.gpa = gpa;
-        this.major = major;
     }
 
     public String getName() {
@@ -35,19 +33,19 @@ public class Student {
         this.name = name;
     }
 
-    public float getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public float getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
@@ -67,16 +65,10 @@ public class Student {
         this.gpa = gpa;
     }
 
-    public String getMajor() {
-        return major;
+    public int getUid() {
+        return uid;
     }
 
-    public void setMajor(String major) {
-        this.major = major;
-    }
-
-
-    
 
 
 
