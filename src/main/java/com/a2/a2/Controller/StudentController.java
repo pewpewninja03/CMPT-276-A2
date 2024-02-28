@@ -32,7 +32,7 @@ public class StudentController {
 
         model.addAttribute("students", students);
         
-        return "/students/showAll";
+        return "students/showAll";
     }
     @GetMapping("/students/edit/{uid}")
     public String getStudent(Model model, @PathVariable int uid) {
